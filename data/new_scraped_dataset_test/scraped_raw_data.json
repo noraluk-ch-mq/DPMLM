@@ -1,0 +1,272 @@
+{
+  "quotes": {
+    "name": "Inspirational Quotes",
+    "description": "Inspirational quotes and motivational messages",
+    "data": [
+      {
+        "text": "“The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”",
+        "author": "Albert Einstein",
+        "source": "quotes.toscrape.com",
+        "category": "quotes"
+      },
+      {
+        "text": "“It is our choices, Harry, that show what we truly are, far more than our abilities.”",
+        "author": "J.K. Rowling",
+        "source": "quotes.toscrape.com",
+        "category": "quotes"
+      },
+      {
+        "text": "“There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.”",
+        "author": "Albert Einstein",
+        "source": "quotes.toscrape.com",
+        "category": "quotes"
+      },
+      {
+        "text": "“The person, be it gentleman or lady, who has not pleasure in a good novel, must be intolerably stupid.”",
+        "author": "Jane Austen",
+        "source": "quotes.toscrape.com",
+        "category": "quotes"
+      },
+      {
+        "text": "“Imperfection is beauty, madness is genius and it's better to be absolutely ridiculous than absolutely boring.”",
+        "author": "Marilyn Monroe",
+        "source": "quotes.toscrape.com",
+        "category": "quotes"
+      },
+      {
+        "text": "“Try not to become a man of success. Rather become a man of value.”",
+        "author": "Albert Einstein",
+        "source": "quotes.toscrape.com",
+        "category": "quotes"
+      },
+      {
+        "text": "“It is better to be hated for what you are than to be loved for what you are not.”",
+        "author": "André Gide",
+        "source": "quotes.toscrape.com",
+        "category": "quotes"
+      },
+      {
+        "text": "“I have not failed. I've just found 10,000 ways that won't work.”",
+        "author": "Thomas A. Edison",
+        "source": "quotes.toscrape.com",
+        "category": "quotes"
+      },
+      {
+        "text": "“A woman is like a tea bag; you never know how strong it is until it's in hot water.”",
+        "author": "Eleanor Roosevelt",
+        "source": "quotes.toscrape.com",
+        "category": "quotes"
+      },
+      {
+        "text": "“A day without sunshine is like, you know, night.”",
+        "author": "Steve Martin",
+        "source": "quotes.toscrape.com",
+        "category": "quotes"
+      },
+      {
+        "text": "“This life is what you make it. No matter what, you're going to mess up sometimes, it's a universal truth. But the good part is you get to decide how you're going to mess it up. Girls will be your friends - they'll act like it anyway. But just remember, some come, some go. The ones that stay with you through everything - they're your true best friends. Don't let go of them. Also remember, sisters make the best friends in the world. As for lovers, well, they'll come and go too. And baby, I hate to say it, most of them - actually pretty much all of them are going to break your heart, but you can't give up because if you give up, you'll never find your soulmate. You'll never find that half who makes you whole and that goes for everything. Just because you fail once, doesn't mean you're gonna fail at everything. Keep trying, hold on, and always, always, always believe in yourself, because if you don't, then who will, sweetie? So keep your head high, keep your chin up, and most importantly, keep smiling, because life's a beautiful thing and there's so much to smile about.”",
+        "author": "Marilyn Monroe",
+        "source": "quotes.toscrape.com",
+        "category": "quotes"
+      },
+      {
+        "text": "“It takes a great deal of bravery to stand up to our enemies, but just as much to stand up to our friends.”",
+        "author": "J.K. Rowling",
+        "source": "quotes.toscrape.com",
+        "category": "quotes"
+      },
+      {
+        "text": "“If you can't explain it to a six year old, you don't understand it yourself.”",
+        "author": "Albert Einstein",
+        "source": "quotes.toscrape.com",
+        "category": "quotes"
+      },
+      {
+        "text": "“You may not be her first, her last, or her only. She loved before she may love again. But if she loves you now, what else matters? She's not perfect—you aren't either, and the two of you may never be perfect together but if she can make you laugh, cause you to think twice, and admit to being human and making mistakes, hold onto her and give her the most you can. She may not be thinking about you every second of the day, but she will give you a part of her that she knows you can break—her heart. So don't hurt her, don't change her, don't analyze and don't expect more than she can give. Smile when she makes you happy, let her know when she makes you mad, and miss her when she's not there.”",
+        "author": "Bob Marley",
+        "source": "quotes.toscrape.com",
+        "category": "quotes"
+      },
+      {
+        "text": "“I like nonsense, it wakes up the brain cells. Fantasy is a necessary ingredient in living.”",
+        "author": "Dr. Seuss",
+        "source": "quotes.toscrape.com",
+        "category": "quotes"
+      }
+    ]
+  },
+  "news": {
+    "name": "News Headlines",
+    "description": "News headlines and articles",
+    "data": [
+      {
+        "text": "Spy case collapse blamed on UK government failure to label China a threat. Prosecutors say they were unable to obtain evidence from the government to meet the threshold for prosecution.",
+        "source": "BBC News RSS",
+        "category": "news",
+        "id": "news_1"
+      },
+      {
+        "text": "Chemistry Nobel awarded to three scientists for work on metal-organic frameworks. The winners of the prestigious science prize was announced by the Nobel committee in Sweden.",
+        "source": "BBC News RSS",
+        "category": "news",
+        "id": "news_2"
+      },
+      {
+        "text": "Key US and regional mediators join talks to end Gaza war. Steve Witkoff and Jared Kushner's arrival in Egypt comes after Hamas submitted a list of Palestinian prisoners it wants Israel to release in exchange for hostages.",
+        "source": "BBC News RSS",
+        "category": "news",
+        "id": "news_3"
+      },
+      {
+        "text": "Thousands join biggest-ever UK environmental lawsuit over river pollution. Livestock and water companies are accused of “extensive” pollution in the Wye, Lugg and Usk rivers.",
+        "source": "BBC News RSS",
+        "category": "news",
+        "id": "news_4"
+      },
+      {
+        "text": "Dog attacks are still rising - even after the XL bully ban. With close to 32,000 dog attacks recorded in England and Wales last year, is there a better solution?",
+        "source": "BBC News RSS",
+        "category": "news",
+        "id": "news_5"
+      },
+      {
+        "text": "It was a normal Saturday night in my pub - then Justin Bieber waltzed in. The Canadian singer filmed an impromptu music video on a surprise visit to a Dundee pub at the weekend.",
+        "source": "BBC News RSS",
+        "category": "news",
+        "id": "news_6"
+      },
+      {
+        "text": "Scammers using AI to lure shoppers to fake businesses. Foreign firms use AI-generated images and false back stories to pose as family-run UK businesses.",
+        "source": "BBC News RSS",
+        "category": "news",
+        "id": "news_7"
+      },
+      {
+        "text": "Chad cuts ties with wildlife charity linked to Prince Harry. The government says the charity African Parks displayed an arrogant and disrespectful attitude.",
+        "source": "BBC News RSS",
+        "category": "news",
+        "id": "news_8"
+      },
+      {
+        "text": "Dolly Parton's sister 'didn't mean to scare anyone' with call for prayers for singer. The singer's sister had asked fans to pray for her after the star postponed gigs due to health issues.",
+        "source": "BBC News RSS",
+        "category": "news",
+        "id": "news_9"
+      },
+      {
+        "text": "How Stacey Solomon decluttered our homes back from the brink. Three families share the realisations that enabled them to declutter and transform their homes and lives.",
+        "source": "BBC News RSS",
+        "category": "news",
+        "id": "news_10"
+      },
+      {
+        "text": "High security a fact of life for UK Jewish community living in fear of attack. Leaders in the UK's tight-knit Jewish population are asking what more can be done to keep their institutions safe.",
+        "source": "BBC News RSS",
+        "category": "news",
+        "id": "news_11"
+      },
+      {
+        "text": "Everything you need to know ahead of the Celebrity Traitors. Sir Stephen Fry, Alan Carr and Celia Imrie are among the stars who will be sitting at the round table.",
+        "source": "BBC News RSS",
+        "category": "news",
+        "id": "news_12"
+      },
+      {
+        "text": "'I sleep with a gas mask on': Life next to Portland protest angering Trump. As Trump threatens military action, residents in Portland tell the BBC about life amid the protests.",
+        "source": "BBC News RSS",
+        "category": "news",
+        "id": "news_13"
+      },
+      {
+        "text": "Why Jordan Pickford is England's undisputed number one in goal",
+        "source": "BBC News RSS",
+        "category": "news",
+        "id": "news_14"
+      },
+      {
+        "text": "'One of the greatest things' - Nigeria's art innovators on display in London. Nigerian Modernism at the Tate spotlights a compelling period in the West African country's history.",
+        "source": "BBC News RSS",
+        "category": "news",
+        "id": "news_15"
+      }
+    ]
+  },
+  "social": {
+    "name": "Social Media Posts",
+    "description": "Social media posts",
+    "data": [
+      {
+        "text": "Mit der neuen Work-&-Stay-Agentur will die Bundesregierung Einwanderung erleichtern. Bürokratie abbauen, Verfahren digitalisieren, Anerkennung beschleunigen – alles sinnvoll.\n\n2/7",
+        "source": "Mastodon Public",
+        "category": "social",
+        "id": "social_1"
+      },
+      {
+        "text": "Transform your workspace into a sanctuary of productivity.In our latest video, we take you on a journey through a serene environment bathed in natural light, where focus and creativity thrive.Here’s what we explore: - The harmonious blend of technology and human creativity.- The importance of self-care and rejuvenation during your workday.- How a well-organized workspace can serve as your catalyst for success.Every detail, from the rhythmic typing to the comforting cup nearby, invites you t",
+        "source": "Mastodon Public",
+        "category": "social",
+        "id": "social_2"
+      },
+      {
+        "text": "8<--------------- 20:00 ---------------8<",
+        "source": "Mastodon Public",
+        "category": "social",
+        "id": "social_3"
+      },
+      {
+        "text": "Полтава в паузі чемпіонату зосередиться на тренувальному процесіhttps://sport.ua/uk/news/804741-poltava-v-pauzi-chempionatu-zosereditsya-na-trenuvalnomu-protsesi#sport #news #ukrainian #спорт #новини #українською #футбол #україна #прем'єрліга",
+        "source": "Mastodon Public",
+        "category": "social",
+        "id": "social_4"
+      },
+      {
+        "text": "Opinion: If the concern is that universities lean too far left, the remedy…",
+        "source": "Mastodon Public",
+        "category": "social",
+        "id": "social_5"
+      },
+      {
+        "text": "#AndhraPradesh | Six persons died and two injured in a fire accident at a crackers manufacturing unit in Dr BR Ambedkar Konaseema district on Wednesday, said a police official.Police suspect that the accident could have occurred due to mishandling at the crackers manufacturing unit.https://www.deccanchronicle.com/southern-states/andhra-pradesh/6-killed-2-injured-in-fire-accident-at-crackers-manufacturing-unit-in-andhra-1908707",
+        "source": "Mastodon Public",
+        "category": "social",
+        "id": "social_6"
+      },
+      {
+        "text": "Quellen:SZ, „Work & Stay – neue Agentur für Einwanderer“Reuters (2024): „Racial tensions cost Germany Inc skilled foreign labour“IAB-Forum: „Xenophobia limits immigration of skilled workers“OECD-Bericht 2024 zur Willkommenskultur7/7",
+        "source": "Mastodon Public",
+        "category": "social",
+        "id": "social_7"
+      },
+      {
+        "text": "🐧 Linux Command of the Day: netstat💭 DESCRIPTIONDisplays network connections, routing tables, interface statistics, masquerade connections, and multicast memberships.📚 KEY FLAGS• -tuln: Show TCP, UDP, listening, and numeric ports.• -p: Show PID/Program name for sockets.🔍 EXAMPLES• netstat -tuln• netstat -anp | grep :80• netstat -rn",
+        "source": "Mastodon Public",
+        "category": "social",
+        "id": "social_8"
+      },
+      {
+        "text": "Circuit Breaker Levels: Wednesday 10/08/2025Level 1: 6244.56Level 2: 5841.69Level 3: 5371.67A market trading halt can be triggered at each of the 3 levels, which are based off a 7, 13, and 20% decline, respectively, from the prior trading day's closing price.",
+        "source": "Mastodon Public",
+        "category": "social",
+        "id": "social_9"
+      },
+      {
+        "text": "Bueno, bonito y mucho más barato. Amazon derriba el precio de este Apple Watch hasta su mínimo histórico https://www.applesfera.com/seleccion/bueno-bonito-mucho-barato-amazon-derriba-precio-este-apple-watch-su-minimo-historico Los dispositivos de Apple no suelen bajar —al menos no demasiado— de precio en las campañas de Amazon, pero durante la Fiesta de Ofertas Prime sí que podemos encontrar algunas ofertas bastante interesantes. El Apple Watch SE (2022), por ejemplo, ha bajado tanto que se enc",
+        "source": "Mastodon Public",
+        "category": "social",
+        "id": "social_10"
+      },
+      {
+        "text": "Hey, we should totally build a molasses-powered funny car!",
+        "source": "Mastodon Public",
+        "category": "social",
+        "id": "social_11"
+      },
+      {
+        "text": "Deutschland braucht beides: effiziente Verfahren und ein glaubwürdiges Signal, dass Menschen, die hier arbeiten wollen, willkommen sind.Erst dann wird aus Fachkräfteeinwanderung echte Integration.6/7",
+        "source": "Mastodon Public",
+        "category": "social",
+        "id": "social_12"
+      }
+    ]
+  }
+}

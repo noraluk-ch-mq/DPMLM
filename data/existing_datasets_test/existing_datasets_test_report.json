@@ -1,0 +1,122 @@
+{
+  "timestamp": "2025-10-05T17:04:44.867223",
+  "test_info": {
+    "datasets": [
+      "imdb",
+      "amazon",
+      "yelp"
+    ],
+    "epsilon_values": [
+      0.5,
+      1.0,
+      2.0,
+      5.0,
+      10.0
+    ],
+    "total_tests": 120
+  },
+  "analysis": {
+    "overall_stats": {
+      "total_tests": 120,
+      "successful_tests": 120,
+      "success_rate": 100.0,
+      "avg_change_percentage": 77.29887321289317,
+      "avg_processing_time": 0.4783390661080678,
+      "std_change_percentage": 18.920626211475135,
+      "std_processing_time": 0.2886703859733198
+    },
+    "by_dataset": {
+      "imdb": {
+        "test_count": 40,
+        "avg_change_percentage": 84.07728765487386,
+        "avg_processing_time": 0.683293342590332,
+        "std_change_percentage": 12.762529226937538,
+        "std_processing_time": 0.36779459913672946
+      },
+      "amazon": {
+        "test_count": 40,
+        "avg_change_percentage": 73.32371794871794,
+        "avg_processing_time": 0.329056990146637,
+        "std_change_percentage": 19.57753920133932,
+        "std_processing_time": 0.11719627016814688
+      },
+      "yelp": {
+        "test_count": 40,
+        "avg_change_percentage": 74.49561403508771,
+        "avg_processing_time": 0.4226668655872345,
+        "std_change_percentage": 21.789326343607343,
+        "std_processing_time": 0.19010141904504405
+      }
+    },
+    "by_epsilon": {
+      "0.5": {
+        "test_count": 24,
+        "avg_change_percentage": 74.68047819794644,
+        "avg_processing_time": 0.511884888013204,
+        "std_change_percentage": 18.383098539976157,
+        "std_processing_time": 0.428793952546258
+      },
+      "1.0": {
+        "test_count": 24,
+        "avg_change_percentage": 76.16857343604168,
+        "avg_processing_time": 0.46449113885561627,
+        "std_change_percentage": 19.632168456886724,
+        "std_processing_time": 0.24197874489213164
+      },
+      "2.0": {
+        "test_count": 24,
+        "avg_change_percentage": 79.93515168537854,
+        "avg_processing_time": 0.4666454593340556,
+        "std_change_percentage": 19.237404455304443,
+        "std_processing_time": 0.24180568630774307
+      },
+      "5.0": {
+        "test_count": 24,
+        "avg_change_percentage": 77.95428772175596,
+        "avg_processing_time": 0.47215839227040607,
+        "std_change_percentage": 19.774968015925314,
+        "std_processing_time": 0.2565820766964549
+      },
+      "10.0": {
+        "test_count": 24,
+        "avg_change_percentage": 77.75587502334326,
+        "avg_processing_time": 0.4765154520670573,
+        "std_change_percentage": 18.743443431001936,
+        "std_processing_time": 0.250724046308601
+      }
+    },
+    "privacy_utility_analysis": {
+      "epsilon_change_correlation": 0.03224629044894395,
+      "epsilon_time_correlation": -0.013773863129454703,
+      "best_privacy_config": {
+        "success": true,
+        "original_text": "If there was ever an indication of a writer and a director's ability to meld two highly volatile temperaments into a seamless union of creativity, then this is it!",
+        "rewritten_text": "Measuring there was caut an indust of a math and a french ranks are to liquid clasp cash ain traumat into a ministries pesticides of different, then this is it!",
+        "processing_time": 2.323870897293091,
+        "total_words": 29,
+        "changed_words": 22,
+        "change_percentage": 75.86206896551724,
+        "epsilon": 0.5,
+        "dataset": "imdb"
+      },
+      "best_utility_config": {
+        "success": true,
+        "original_text": "If there was ever an indication of a writer and a director's ability to meld two highly volatile temperaments into a seamless union of creativity, then this is it!",
+        "rewritten_text": "Jones there was tm an outlining of a quart and a toler cleaners enduring to slick bribes surrounding dark empires into a aborted king of mind, then this is it!",
+        "processing_time": 1.2440917491912842,
+        "total_words": 29,
+        "changed_words": 22,
+        "change_percentage": 75.86206896551724,
+        "epsilon": 10.0,
+        "dataset": "imdb"
+      }
+    }
+  },
+  "summary": {
+    "success_rate": 100.0,
+    "avg_change_percentage": 77.29887321289317,
+    "avg_processing_time": 0.4783390661080678,
+    "best_dataset": "amazon",
+    "best_epsilon": 0.5
+  }
+}

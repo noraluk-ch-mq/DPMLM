@@ -1,0 +1,134 @@
+{
+  "timestamp": "2025-10-05T20:09:25.855933",
+  "test_info": {
+    "categories": [
+      "quotes",
+      "news",
+      "social"
+    ],
+    "epsilon_values": [
+      0.5,
+      1.0,
+      2.0,
+      5.0,
+      10.0
+    ],
+    "total_tests": 225,
+    "data_sources": {
+      "quotes": "Inspirational Quotes",
+      "news": "News Headlines",
+      "social": "Social Media Posts"
+    }
+  },
+  "scraped_data_summary": {
+    "quotes": {
+      "name": "Inspirational Quotes",
+      "description": "Inspirational quotes and motivational messages",
+      "count": 15
+    },
+    "news": {
+      "name": "News Headlines",
+      "description": "News headlines and articles",
+      "count": 15
+    },
+    "social": {
+      "name": "Social Media Posts",
+      "description": "Social media posts",
+      "count": 15
+    }
+  },
+  "analysis": {
+    "overall_stats": {
+      "total_tests": 225,
+      "successful_tests": 215,
+      "success_rate": 95.55555555555556,
+      "avg_change_percentage": 87.05292063862392,
+      "avg_processing_time": 1.3977275282837625,
+      "avg_text_length": 140.7906976744186,
+      "std_change_percentage": 15.998889024940251,
+      "std_processing_time": 0.8274293950295757
+    },
+    "by_category": {
+      "quotes": {
+        "test_count": 65,
+        "avg_change_percentage": 99.23388352538151,
+        "avg_processing_time": 0.7931119698744554,
+        "avg_text_length": 90.15384615384616,
+        "std_change_percentage": 5.294268781847354,
+        "std_processing_time": 0.22266887607887567
+      },
+      "news": {
+        "test_count": 75,
+        "avg_change_percentage": 91.37306593385026,
+        "avg_processing_time": 1.789283898671468,
+        "avg_text_length": 177.06666666666666,
+        "std_change_percentage": 6.078494951697905,
+        "std_processing_time": 0.405894874103443
+      },
+      "social": {
+        "test_count": 75,
+        "avg_change_percentage": 72.17594084154102,
+        "avg_processing_time": 1.530171308517456,
+        "avg_text_length": 148.4,
+        "std_change_percentage": 17.477713360434265,
+        "std_processing_time": 1.130488675376412
+      }
+    },
+    "by_epsilon": {
+      "0.5": {
+        "test_count": 43,
+        "avg_change_percentage": 87.21933040984644,
+        "avg_processing_time": 1.4079566223676814,
+        "std_change_percentage": 16.145105029863405,
+        "std_processing_time": 0.8440982904805162
+      },
+      "1.0": {
+        "test_count": 43,
+        "avg_change_percentage": 87.49847412264268,
+        "avg_processing_time": 1.3798639164414517,
+        "std_change_percentage": 16.01297026957432,
+        "std_processing_time": 0.8187225272291524
+      },
+      "2.0": {
+        "test_count": 43,
+        "avg_change_percentage": 87.11324146263965,
+        "avg_processing_time": 1.3837740753972254,
+        "std_change_percentage": 16.054343381650444,
+        "std_processing_time": 0.8208886212723386
+      },
+      "5.0": {
+        "test_count": 43,
+        "avg_change_percentage": 87.31403734449866,
+        "avg_processing_time": 1.4090051484662434,
+        "std_change_percentage": 15.919185285804623,
+        "std_processing_time": 0.8346755755086853
+      },
+      "10.0": {
+        "test_count": 43,
+        "avg_change_percentage": 86.11951985349218,
+        "avg_processing_time": 1.4080378787462102,
+        "std_change_percentage": 16.57590644836231,
+        "std_processing_time": 0.8568422329311387
+      }
+    },
+    "text_length_analysis": {
+      "length_change_correlation": 0.13107151374276307,
+      "length_time_correlation": 0.9399252654952401,
+      "min_length": 50,
+      "max_length": 300,
+      "avg_length": 140.7906976744186
+    },
+    "privacy_utility_analysis": {
+      "epsilon_change_correlation": -0.02629918065717136,
+      "epsilon_time_correlation": 0.008189338998609413
+    }
+  },
+  "summary": {
+    "success_rate": 95.55555555555556,
+    "avg_change_percentage": 87.05292063862392,
+    "avg_processing_time": 1.3977275282837625,
+    "avg_text_length": 140.7906976744186,
+    "best_category": "social",
+    "best_epsilon": 10.0
+  }
+}

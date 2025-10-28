@@ -1,6 +1,7 @@
 importlib_resources
 nltk
 numpy
+pandas
 spacy
 torch
 transformers
