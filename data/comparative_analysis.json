@@ -1,0 +1,52 @@
+{
+  "success_rate": {
+    "existing": 100.0,
+    "new": 85.85858585858585
+  },
+  "avg_change": {
+    "existing": 52.590242045887194,
+    "new": 45.5380939157001
+  },
+  "avg_processing_time": {
+    "existing": 0.447160538037618,
+    "new": 3.869465790372906
+  },
+  "avg_text_length": {
+    "existing": 57.708333333333336,
+    "new": 264.9040404040404
+  },
+  "avg_readability_flesch": {
+    "existing": 75.62279954213138,
+    "new": 61.5581865872901
+  },
+  "avg_lexical_diversity": {
+    "existing": 0.9698409334243742,
+    "new": 0.8726707703925662
+  },
+  "correlations": {
+    "existing": {
+      "label": "existing",
+      "epsilon_change_pearson": 3.707384296147378e-18,
+      "length_time_pearson": 0.9451139200868921,
+      "lexicaldiv_change_pearson": 0.5137303652055388
+    },
+    "new": {
+      "label": "new",
+      "epsilon_change_pearson": -0.15487026461971654,
+      "length_time_pearson": 0.03658148453743068,
+      "lexicaldiv_change_pearson": 0.6585151610716706
+    }
+  },
+  "notes": {
+    "quality_meta_available": true,
+    "existing_meta_available": true,
+    "new_meta_available": true
+  },
+  "figures": {
+    "comparison_change_dist": "figures/comparison_change_dist.png",
+    "epsilon_vs_change_overlay": "figures/epsilon_vs_change_overlay.png",
+    "length_time_existing_vs_new": "figures/length_time_existing_vs_new.png",
+    "lexical_diversity_comparison": "figures/lexical_diversity_comparison.png",
+    "readability_comparison": "figures/readability_comparison.png"
+  }
+}

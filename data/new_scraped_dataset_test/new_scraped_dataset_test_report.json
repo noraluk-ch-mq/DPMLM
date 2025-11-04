@@ -1,10 +1,11 @@
 {
-  "timestamp": "2025-10-05T20:09:25.855933",
   "test_info": {
     "categories": [
       "quotes",
       "news",
-      "social"
+      "social",
+      "academic",
+      "reviews"
     ],
     "epsilon_values": [
       0.5,
@@ -13,122 +14,121 @@
       5.0,
       10.0
     ],
-    "total_tests": 225,
-    "data_sources": {
-      "quotes": "Inspirational Quotes",
-      "news": "News Headlines",
-      "social": "Social Media Posts"
+    "total_tests": 990,
+    "timestamp": "2025-11-04T15:06:17.955658"
+  },
+  "overall_stats": {
+    "total_tests": 990,
+    "successful_tests": 850,
+    "success_rate": 85.85858585858585,
+    "avg_change_percentage": 53.03848585475659,
+    "avg_processing_time": 4.506789567610797,
+    "avg_text_length": 135.68235294117648
+  },
+  "category_wise_stats": {
+    "news": {
+      "total_tests": 245,
+      "successful_tests": 245,
+      "success_rate": 100.0,
+      "avg_change": 61.336853170012006,
+      "avg_time": 4.064697447601629,
+      "avg_text_length": 124.61224489795919
+    },
+    "quotes": {
+      "total_tests": 150,
+      "successful_tests": 150,
+      "success_rate": 100.0,
+      "avg_change": 48.035626125249664,
+      "avg_time": 5.738549044926962,
+      "avg_text_length": 155.83333333333334
+    },
+    "social": {
+      "total_tests": 200,
+      "successful_tests": 200,
+      "success_rate": 100.0,
+      "avg_change": 47.9074319514335,
+      "avg_time": 1.7002935421466827,
+      "avg_text_length": 74.475
+    },
+    "academic": {
+      "total_tests": 195,
+      "successful_tests": 55,
+      "success_rate": 28.205128205128204,
+      "avg_change": 51.946565309496656,
+      "avg_time": 19.967377732016825,
+      "avg_text_length": 462.27272727272725
+    },
+    "reviews": {
+      "total_tests": 200,
+      "successful_tests": 200,
+      "success_rate": 100.0,
+      "avg_change": 52.05646274396847,
+      "avg_time": 2.6793670868873596,
+      "avg_text_length": 105.525
+    }
+  },
+  "epsilon_wise_stats": {
+    "0.5": {
+      "total_tests": 198,
+      "successful_tests": 170,
+      "success_rate": 85.85858585858585,
+      "avg_change": 58.42724370873962,
+      "avg_time": 4.966734912816216
+    },
+    "1.0": {
+      "total_tests": 198,
+      "successful_tests": 170,
+      "success_rate": 85.85858585858585,
+      "avg_change": 57.61082090412686,
+      "avg_time": 5.216612815856934
+    },
+    "2.0": {
+      "total_tests": 198,
+      "successful_tests": 170,
+      "success_rate": 85.85858585858585,
+      "avg_change": 52.79384298370596,
+      "avg_time": 4.582792056308073
+    },
+    "5.0": {
+      "total_tests": 198,
+      "successful_tests": 170,
+      "success_rate": 85.85858585858585,
+      "avg_change": 49.010930296954015,
+      "avg_time": 4.165192977119895
+    },
+    "10.0": {
+      "total_tests": 198,
+      "successful_tests": 170,
+      "success_rate": 85.85858585858585,
+      "avg_change": 47.34959138025648,
+      "avg_time": 3.6026150759528663
     }
   },
   "scraped_data_summary": {
     "quotes": {
       "name": "Inspirational Quotes",
-      "description": "Inspirational quotes and motivational messages",
-      "count": 15
+      "description": "Inspirational quotes and motivational messages from multiple sources",
+      "sample_count": 30
     },
     "news": {
       "name": "News Headlines",
-      "description": "News headlines and articles",
-      "count": 15
+      "description": "News headlines and articles from major news outlets",
+      "sample_count": 49
     },
     "social": {
       "name": "Social Media Posts",
-      "description": "Social media posts",
-      "count": 15
+      "description": "Social media posts from various platforms and communities",
+      "sample_count": 40
+    },
+    "academic": {
+      "name": "Academic Abstracts",
+      "description": "Academic paper abstracts from arXiv in AI/ML domains",
+      "sample_count": 39
+    },
+    "reviews": {
+      "name": "Product Reviews",
+      "description": "Product reviews and customer feedback",
+      "sample_count": 40
     }
-  },
-  "analysis": {
-    "overall_stats": {
-      "total_tests": 225,
-      "successful_tests": 215,
-      "success_rate": 95.55555555555556,
-      "avg_change_percentage": 87.05292063862392,
-      "avg_processing_time": 1.3977275282837625,
-      "avg_text_length": 140.7906976744186,
-      "std_change_percentage": 15.998889024940251,
-      "std_processing_time": 0.8274293950295757
-    },
-    "by_category": {
-      "quotes": {
-        "test_count": 65,
-        "avg_change_percentage": 99.23388352538151,
-        "avg_processing_time": 0.7931119698744554,
-        "avg_text_length": 90.15384615384616,
-        "std_change_percentage": 5.294268781847354,
-        "std_processing_time": 0.22266887607887567
-      },
-      "news": {
-        "test_count": 75,
-        "avg_change_percentage": 91.37306593385026,
-        "avg_processing_time": 1.789283898671468,
-        "avg_text_length": 177.06666666666666,
-        "std_change_percentage": 6.078494951697905,
-        "std_processing_time": 0.405894874103443
-      },
-      "social": {
-        "test_count": 75,
-        "avg_change_percentage": 72.17594084154102,
-        "avg_processing_time": 1.530171308517456,
-        "avg_text_length": 148.4,
-        "std_change_percentage": 17.477713360434265,
-        "std_processing_time": 1.130488675376412
-      }
-    },
-    "by_epsilon": {
-      "0.5": {
-        "test_count": 43,
-        "avg_change_percentage": 87.21933040984644,
-        "avg_processing_time": 1.4079566223676814,
-        "std_change_percentage": 16.145105029863405,
-        "std_processing_time": 0.8440982904805162
-      },
-      "1.0": {
-        "test_count": 43,
-        "avg_change_percentage": 87.49847412264268,
-        "avg_processing_time": 1.3798639164414517,
-        "std_change_percentage": 16.01297026957432,
-        "std_processing_time": 0.8187225272291524
-      },
-      "2.0": {
-        "test_count": 43,
-        "avg_change_percentage": 87.11324146263965,
-        "avg_processing_time": 1.3837740753972254,
-        "std_change_percentage": 16.054343381650444,
-        "std_processing_time": 0.8208886212723386
-      },
-      "5.0": {
-        "test_count": 43,
-        "avg_change_percentage": 87.31403734449866,
-        "avg_processing_time": 1.4090051484662434,
-        "std_change_percentage": 15.919185285804623,
-        "std_processing_time": 0.8346755755086853
-      },
-      "10.0": {
-        "test_count": 43,
-        "avg_change_percentage": 86.11951985349218,
-        "avg_processing_time": 1.4080378787462102,
-        "std_change_percentage": 16.57590644836231,
-        "std_processing_time": 0.8568422329311387
-      }
-    },
-    "text_length_analysis": {
-      "length_change_correlation": 0.13107151374276307,
-      "length_time_correlation": 0.9399252654952401,
-      "min_length": 50,
-      "max_length": 300,
-      "avg_length": 140.7906976744186
-    },
-    "privacy_utility_analysis": {
-      "epsilon_change_correlation": -0.02629918065717136,
-      "epsilon_time_correlation": 0.008189338998609413
-    }
-  },
-  "summary": {
-    "success_rate": 95.55555555555556,
-    "avg_change_percentage": 87.05292063862392,
-    "avg_processing_time": 1.3977275282837625,
-    "avg_text_length": 140.7906976744186,
-    "best_category": "social",
-    "best_epsilon": 10.0
   }
 }

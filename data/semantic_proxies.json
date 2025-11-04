@@ -1,0 +1,14 @@
+{
+  "existing": {
+    "embedding_similarity_roberta_mean": 0.9606130123138428,
+    "embedding_similarity_roberta_median": 0.9604684114456177,
+    "label_invariance_rewrite": 0.46,
+    "sample_size": 100
+  },
+  "new": {
+    "embedding_similarity_roberta_mean": 0.9551776051521301,
+    "embedding_similarity_roberta_median": 0.9562721252441406,
+    "label_invariance_rewrite": 0.44,
+    "sample_size": 100
+  }
+}
