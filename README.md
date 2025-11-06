@@ -1,51 +1,65 @@
 # DP-MLM
-This is the code repository for the ACL Findings paper: *DP-MLM: Differentially Private Text Rewriting Using Masked Language Models*
+
+Code​‍​‌‍​‍‌ repository for the ACL Findings paper: "DP-MLM: Differentially Private Text Rewriting Using Masked Language ​‍​‌‍​‍‌Models".
 
 ## Setup
-In this repository, you will find a `requirements.txt` file, which contains all necessary Python dependencies.
 
-Otherwise, there are two main files, both of which arte easily importable and reusable:
-- `DPMLM.py`: code for running the `DP-MLM` mechanism. `privatize` replaces a single token, while `dpmlm_rewrite` will rewrite an entire text.
-- `LLMDP.py`: implementations of both `DP-Paraphrase` and `DP-Prompt`. Note that for `DP-Prompt`, you will need to download the corresponding LMs, i.e., from Hugging Face.
+- Python 3.10+ (the code has been tested on macOS with Python 3.13.4).
+- To install necessary package dependencies, run the following command:
+ `pip install -r requirements.txt`.
+- Resources:
+ - WordNet 2022: `python -m wn download oewn:2022`.
+ - NLTK VADER (for super-fast sentiment checks):
+ `python -c "import nltk; nltk.download('vader_lexicon')"`.
+ - Optional GPU acceleration (PyTorch + CUDA) for embedding computations.
 
-## Usage of DP-MLM
-`M = DPMLM.DPMLM()`
+## File Overview and ​‍​‌‍​‍‌Commands
 
-`M.dpmlm_rewrite("hello world", epsilon=100)`
+-​‍​‌‍​‍‌ `test_existing_datasets.py` — Execute DP-MLM on various standard datasets and save the results in `data/existing_datasets_test/`.
+- Run:
+ ```bash
+ python test_existing_datasets.py
+ ```
+- `test_new_scraped_dataset.py` — Fetch data (Quotes/News/Social) and evaluate DP-MLM, writing results under `data/new_scraped_dataset_test/`.
+- Run:
+ ```bash
+ python test_new_scraped_dataset.py
+ ```
+- `scripts/compute_semantic_proxies.py` — Create semantic proxies (embedding similarity, sentiment label invariance).
+- Run:
+ ```bash
+ python scripts/compute_semantic_proxies.py
+ ```
+- `scripts/compare_datasets.py` — Compare existing vs new datasets; produce summary metrics and figures.
+- Run:
+ ```bash
+ python scripts/compare_datasets.py --existing data/existing_datasets_test/existing_datasets_test_results.csv --new data/new_scraped_dataset_test/new_scraped_dataset_test_results.csv
+ ```
+- `scripts/length_time_fit.py` — Fit and visualize processing time vs writing length per category.
+- Run:
+ ```bash
+ python scripts/length_time_fit.py
+ ```
+- `scripts/human_eval_vader.py` — Quick sentiment invariance evaluation for Reviews/Social; outputs table for the report.
+- Run:
+ ```bash
+ python scripts/human_eval_vader.py
+ ```
+- `scripts/ablation_long_texts.py` — Ablation study for long-text constraints; outputs JSON and LaTeX table.
+- Run:
+ ```bash
+ python scripts/ablation_long_texts.py
+ ```
+- `scripts/generate_appendix_examples.py` — Generate qualitative appendix (LaTeX) from selected examples.
+- Run:
+ ```bash
+ python scripts/generate_appendix_examples.py
+ ```
+- `libs/dataset_manager.py` — Dataset loading/preparation utilities used by tests and scripts.
+- `libs/scraper.py` — Web scraping utilities to build the new dataset.
+- `libs/utils.py` — General helpers (text processing, constraints, metrics, ​‍​‌‍​‍‌I/O).
 
-## Usage of other evaluated models
-`M = LLMDP.DPPrompt()`
-
-`M.privatize("hello world", epsilon=100)`
-
-## Important notes
-In order to use `LLMDP.DPParaphrase`, you must download the fine-tuned model directory.
-This can be found at the following link: [Model](https://drive.google.com/drive/folders/1w_6MHQEw9LGkOHx_K1tc6t9djzrprITp?usp=sharing)
-
-Also, you will need to download the wordnet 2022 corpus: `python -m wn download oewn:2022`
-
-Finally, each code implementation sets specific clipping bounds, which was done for the purposes of comparable evaluation in the paper. These can be freely changed in the parameters, and should be experimented with for (possibly) better performance.
-
-## Citation
-Please consider citing the original work that introduced `DP-MLM`. Thank you!
-
-```
-@inproceedings{meisenbacher-etal-2024-dp,
-    title = "{DP}-{MLM}: Differentially Private Text Rewriting Using Masked Language Models",
-    author = "Meisenbacher, Stephen  and
-      Chevli, Maulik  and
-      Vladika, Juraj  and
-      Matthes, Florian",
-    editor = "Ku, Lun-Wei  and
-      Martins, Andre  and
-      Srikumar, Vivek",
-    booktitle = "Findings of the Association for Computational Linguistics: ACL 2024",
-    month = aug,
-    year = "2024",
-    address = "Bangkok, Thailand",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2024.findings-acl.554/",
-    doi = "10.18653/v1/2024.findings-acl.554",
-    pages = "9314--9328"
-}
-```
+-​‍​‌‍​‍‌ `data/` — data in CSV/JSON/TeX formats that are used by the scripts and the report.
+- `figures/` — figures that have been generated and are included in the report.
+- `requirements.txt` — Python libraries and packages required.
+- `.gitignore` — Git ignored ​‍​‌‍​‍‌files/directories.
