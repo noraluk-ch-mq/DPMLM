@@ -1,0 +1,15 @@
+\begin{table}[H]
+  \centering
+  \caption{Ablation on long texts (\,$\geq$600 chars): success and change}
+  \begin{tabular}{lrrr}
+    \toprule
+    Ablation & n & Success(\%) & Avg change \\
+    \midrule
+    base & 5 & 60.0 & 0.325 \\
+    no\_POS & 5 & 60.0 & 0.325 \\
+    no\_FILTER & 5 & 60.0 & 0.325 \\
+    stop\_included & 5 & 60.0 & 0.549 \\
+    no\_CONCAT & 5 & 100.0 & 0.560 \\
+    \bottomrule
+  \end{tabular}
+\end{table}

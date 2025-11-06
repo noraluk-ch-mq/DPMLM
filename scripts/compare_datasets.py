@@ -1,29 +1,5 @@
 #!/usr/bin/env python3
 
-"""
-Compare DP-MLM performance on existing UCI datasets vs new scraped datasets.
-
-Inputs (expected to exist):
-- data/existing_datasets_test/existing_datasets_test_results.csv
-- data/existing_datasets_test/existing_datasets_test_report.json
-- data/new_scraped_dataset_test/new_scraped_dataset_test_results.csv
-- data/new_scraped_dataset_test/new_scraped_dataset_test_report.json
-- data/new_scraped_dataset_test/data_quality_report.json (optional)
-
-Outputs:
-- figures/comparison_change_dist.png
-- figures/epsilon_vs_change_overlay.png
-- figures/length_time_existing_vs_new.png
-- figures/lexical_diversity_comparison.png
-- figures/readability_comparison.png
-- data/comparative_analysis.json
-
-This script computes additional metrics:
-- Readability (Flesch Reading Ease) and lexical diversity for both datasets
-- Correlations: epsilon vs change %, text length vs processing time
-- Error breakdown for new dataset
-"""
-
 import os
 import json
 import math
@@ -184,16 +160,19 @@ def make_figures(existing_df, new_df):
         print(f"Warning: PDF save failed for {out1}: {e}")
     plt.close()
 
-    # 2) Epsilon vs average change overlay
+    # 2) Epsilon vs average change overlay with error bars (mean ± 95% CI)
     plt.figure(figsize=(10, 6))
-    ex_eps = existing_df.groupby("epsilon")["change_percentage"].mean()
-    new_eps = new_df.groupby("epsilon")["change_percentage"].mean()
-    plt.plot(ex_eps.index, ex_eps.values, "o-", label="Existing")
-    plt.plot(new_eps.index, new_eps.values, "o-", label="New")
+    ex_group = existing_df.groupby("epsilon")["change_percentage"].agg(['mean', 'std', 'count']).sort_index()
+    new_group = new_df.groupby("epsilon")["change_percentage"].agg(['mean', 'std', 'count']).sort_index()
+    # Compute 95% CI assuming normal approximation
+    ex_ci = 1.96 * (ex_group['std'] / np.sqrt(ex_group['count']).replace(0, np.nan))
+    new_ci = 1.96 * (new_group['std'] / np.sqrt(new_group['count']).replace(0, np.nan))
+    plt.errorbar(ex_group.index.astype(float), ex_group['mean'], yerr=ex_ci, fmt='o-', capsize=4, label="Existing")
+    plt.errorbar(new_group.index.astype(float), new_group['mean'], yerr=new_ci, fmt='o-', capsize=4, label="New")
     plt.xscale("log")
     plt.xlabel("Epsilon (ε)")
     plt.ylabel("Average Change (%)")
-    plt.title("Privacy–Utility: ε vs Avg Change (Overlay)")
+    plt.title("Privacy–Utility: ε vs Avg Change (mean ± 95% CI)")
     plt.grid(True, alpha=0.3)
     plt.legend()
     out2 = FIG_DIR / "epsilon_vs_change_overlay.png"
@@ -271,6 +250,40 @@ def make_figures(existing_df, new_df):
     }
 
 
+def write_epsilon_summary_table(existing_df: pd.DataFrame, new_df: pd.DataFrame, out_tex: Path):
+    """Write LaTeX table summarizing mean ± sd of change% per epsilon for both datasets."""
+    ex_stats = existing_df.groupby("epsilon")["change_percentage"].agg(['mean', 'std', 'count']).sort_index()
+    new_stats = new_df.groupby("epsilon")["change_percentage"].agg(['mean', 'std', 'count']).sort_index()
+
+    lines = []
+    lines.append("\\begin{table}[H]")
+    lines.append("  \\centering")
+    lines.append("  \\caption{Per-ε summary of change\\% (mean ± sd) and counts}")
+    lines.append("  \\begin{tabular}{lccc}")
+    lines.append("    \\toprule")
+    lines.append("    $\\epsilon$ & Existing (mean $\\pm$ sd) & New (mean $\\pm$ sd) & Counts (E/N) \\\\ ")
+    lines.append("    \\midrule")
+    epsilons = sorted(set(ex_stats.index.tolist()) | set(new_stats.index.tolist()))
+    for eps in epsilons:
+        ex_row = ex_stats.loc[eps] if eps in ex_stats.index else None
+        new_row = new_stats.loc[eps] if eps in new_stats.index else None
+        ex_mean = ex_row['mean'] if ex_row is not None else float('nan')
+        ex_sd = ex_row['std'] if ex_row is not None else float('nan')
+        ex_n = int(ex_row['count']) if ex_row is not None else 0
+        new_mean = new_row['mean'] if new_row is not None else float('nan')
+        new_sd = new_row['std'] if new_row is not None else float('nan')
+        new_n = int(new_row['count']) if new_row is not None else 0
+        row = f"    {eps} & {ex_mean:.2f} $\\pm$ {ex_sd:.2f} & {new_mean:.2f} $\\pm$ {new_sd:.2f} & {ex_n}/{new_n} \\\\" 
+        lines.append(row)
+    lines.append("    \\bottomrule")
+    lines.append("  \\end{tabular}")
+    lines.append("\\end{table}")
+
+    out_tex.parent.mkdir(parents=True, exist_ok=True)
+    with open(out_tex, 'w', encoding='utf-8') as f:
+        f.write("\n".join(lines))
+
+
 def main():
     existing_df, existing_meta = load_existing()
     new_df, new_meta, quality_meta = load_new()
@@ -337,6 +350,14 @@ def main():
     # Figures
     fig_paths = make_figures(existing_df, new_df)
     summary["figures"] = fig_paths
+
+    # Write epsilon summary table (LaTeX)
+    eps_table_path = DATA_DIR / "statistical_tests" / "epsilon_summary_table.tex"
+    try:
+        write_epsilon_summary_table(existing_df, new_df, eps_table_path)
+        summary["epsilon_summary_table_tex"] = str(eps_table_path)
+    except Exception as e:
+        summary["epsilon_summary_table_error"] = str(e)
 
     # Save summary JSON
     out_json = DATA_DIR / "comparative_analysis.json"

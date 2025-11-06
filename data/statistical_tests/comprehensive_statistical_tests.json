@@ -1,0 +1,250 @@
+{
+  "Change Percentage": {
+    "metric": "Change Percentage",
+    "sample_sizes": {
+      "existing": 120,
+      "new": 990
+    },
+    "descriptive_stats": {
+      "existing": {
+        "mean": 52.590242045887194,
+        "std": 11.404841850933906,
+        "median": 50.0,
+        "q1": 46.35989010989011,
+        "q3": 60.0
+      },
+      "new": {
+        "mean": 45.5380939157001,
+        "std": 22.166537929089174,
+        "median": 50.0,
+        "q1": 38.46153846153847,
+        "q3": 58.82352941176471
+      }
+    },
+    "normality_tests": {
+      "existing": {
+        "shapiro_w": 0.8870107909037521,
+        "p_value": 5.621727938404144e-06
+      },
+      "new": {
+        "shapiro_w": 0.8870107909037521,
+        "p_value": 2.877261666263709e-26
+      },
+      "both_normal": false
+    },
+    "variance_test": {
+      "levene_statistic": 28.09756900855062,
+      "p_value": 1.3914239579710588e-07
+    },
+    "non_parametric_tests": {
+      "mann_whitney_u": {
+        "statistic": 66042.5,
+        "p_value": 0.04483706231063916
+      }
+    },
+    "effect_size": {
+      "cohens_d": 0.3315023695098691,
+      "interpretation": "small"
+    },
+    "bootstrap_confidence_intervals": {
+      "existing_mean": {
+        "lower": 50.54775183000989,
+        "upper": 54.70571673323688
+      },
+      "new_mean": {
+        "lower": 44.20266614225272,
+        "upper": 46.949256263542914
+      },
+      "difference_in_means": {
+        "lower": 4.563303307561016,
+        "upper": 9.602853165666122
+      }
+    }
+  },
+  "Processing Time (seconds)": {
+    "metric": "Processing Time (seconds)",
+    "sample_sizes": {
+      "existing": 120,
+      "new": 990
+    },
+    "descriptive_stats": {
+      "existing": {
+        "mean": 0.447160538037618,
+        "std": 0.330445090036494,
+        "median": 0.32925450801849365,
+        "q1": 0.23036450147628781,
+        "q3": 0.5452597737312317
+      },
+      "new": {
+        "mean": 3.869465790372906,
+        "std": 6.118410282713199,
+        "median": 2.1549839973449707,
+        "q1": 1.171558439731598,
+        "q3": 3.497389018535614
+      }
+    },
+    "normality_tests": {
+      "existing": {
+        "shapiro_w": 0.5434249145124533,
+        "p_value": 6.8342090532712155e-12
+      },
+      "new": {
+        "shapiro_w": 0.5434249145124533,
+        "p_value": 8.35254630433025e-45
+      },
+      "both_normal": false
+    },
+    "variance_test": {
+      "levene_statistic": 25.03281532986831,
+      "p_value": 6.550370398207466e-07
+    },
+    "non_parametric_tests": {
+      "mann_whitney_u": {
+        "statistic": 18631.0,
+        "p_value": 8.499954269213391e-35
+      }
+    },
+    "effect_size": {
+      "cohens_d": -0.5919372668492473,
+      "interpretation": "medium"
+    },
+    "bootstrap_confidence_intervals": {
+      "existing_mean": {
+        "lower": 0.3939044870932897,
+        "upper": 0.5093146081268787
+      },
+      "new_mean": {
+        "lower": 3.475478616995041,
+        "upper": 4.234574376898583
+      },
+      "difference_in_means": {
+        "lower": -3.839691636095745,
+        "upper": -3.0623472997967647
+      }
+    }
+  },
+  "Text Length (characters)": {
+    "metric": "Text Length (characters)",
+    "sample_sizes": {
+      "existing": 120,
+      "new": 990
+    },
+    "descriptive_stats": {
+      "existing": {
+        "mean": 57.708333333333336,
+        "std": 39.66718598864435,
+        "median": 44.5,
+        "q1": 31.0,
+        "q3": 65.25
+      },
+      "new": {
+        "mean": 264.9040404040404,
+        "std": 357.6829375378438,
+        "median": 109.0,
+        "q1": 76.0,
+        "q3": 235.0
+      }
+    },
+    "normality_tests": {
+      "existing": {
+        "shapiro_w": 0.6262623735126116,
+        "p_value": 3.2929150003204495e-10
+      },
+      "new": {
+        "shapiro_w": 0.6262623735126116,
+        "p_value": 7.871765054215946e-42
+      },
+      "both_normal": false
+    },
+    "variance_test": {
+      "levene_statistic": 26.830767503950295,
+      "p_value": 2.63657995739393e-07
+    },
+    "non_parametric_tests": {
+      "mann_whitney_u": {
+        "statistic": 19225.0,
+        "p_value": 8.852862559831718e-34
+      }
+    },
+    "effect_size": {
+      "cohens_d": -0.6126792279649284,
+      "interpretation": "medium"
+    },
+    "bootstrap_confidence_intervals": {
+      "existing_mean": {
+        "lower": 50.833125,
+        "upper": 64.43354166666667
+      },
+      "new_mean": {
+        "lower": 242.5289898989899,
+        "upper": 286.9690404040404
+      },
+      "difference_in_means": {
+        "lower": -232.92210227272727,
+        "upper": -182.81078282828284
+      }
+    }
+  },
+  "Success Rate (binary)": {
+    "metric": "Success Rate (binary)",
+    "sample_sizes": {
+      "existing": 120,
+      "new": 990
+    },
+    "descriptive_stats": {
+      "existing": {
+        "mean": 1.0,
+        "std": 0.0,
+        "median": 1.0,
+        "q1": 1.0,
+        "q3": 1.0
+      },
+      "new": {
+        "mean": 0.8585858585858586,
+        "std": 0.3486243660977062,
+        "median": 1.0,
+        "q1": 1.0,
+        "q3": 1.0
+      }
+    },
+    "normality_tests": {
+      "existing": {
+        "shapiro_w": 0.4135120833398678,
+        "p_value": 1.0
+      },
+      "new": {
+        "shapiro_w": 0.4135120833398678,
+        "p_value": 1.1281964309394173e-48
+      },
+      "both_normal": false
+    },
+    "variance_test": {
+      "levene_statistic": 19.729093799682037,
+      "p_value": 9.817052092443887e-06
+    },
+    "non_parametric_tests": {
+      "mann_whitney_u": {
+        "statistic": 67800.0,
+        "p_value": 1.0605550556140375e-05
+      }
+    },
+    "effect_size": {
+      "cohens_d": 0.4293454233746841,
+      "interpretation": "small"
+    },
+    "bootstrap_confidence_intervals": {
+      "existing_mean": {
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "new_mean": {
+        "lower": 0.8333333333333334,
+        "upper": 0.8798232323232323
+      },
+      "difference_in_means": {
+        "lower": 0.1202020202020202,
+        "upper": 0.1636363636363637
+      }
+    }
+  }
+}
